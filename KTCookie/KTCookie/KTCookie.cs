@@ -79,7 +79,7 @@ namespace KTCookie
         /*
          * Gets data from cookie as 
          */
-        public static IEnumerable<KTCookieObject> GetCookie(string cookieName, string password)
+        public static IEnumerable<KTCookieObject> GetCookie(string cookieName)
         {
             var liReturn = new List<KTCookieObject>();
             try
@@ -112,6 +112,12 @@ namespace KTCookie
             }
             return liReturn;
         }
+
+        public static IEnumerable<KTCookieObject> GetCookie()
+        {
+            return GetCookie(Constant.CookieName);
+        }
+
 
         /*
          * To set cookie expired
